@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DiscreteEventSimulation.objs;
+using DiscreteEventSimulation.objects;
 
 namespace DiscreteEventSimulation.src
 {

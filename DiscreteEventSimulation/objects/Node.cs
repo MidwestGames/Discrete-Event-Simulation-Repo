@@ -1,4 +1,4 @@
-﻿namespace DiscreteEventSimulation.objs
+﻿namespace DiscreteEventSimulation.objects
 {
     public abstract class Node
     {
