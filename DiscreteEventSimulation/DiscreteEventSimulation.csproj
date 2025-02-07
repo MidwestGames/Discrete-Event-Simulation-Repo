@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DiscreteEventSimulation.objs.Program2</StartupObject>
+    <StartupObject>DiscreteEventSimulation.src.Entry</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -62,8 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="objs\Program2.cs" />
-    <Compile Include="src\Program.cs" />
+    <Compile Include="objs\Node.cs" />
+    <Compile Include="src\Entry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
