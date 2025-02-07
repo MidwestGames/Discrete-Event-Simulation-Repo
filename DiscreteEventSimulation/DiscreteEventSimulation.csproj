@@ -62,15 +62,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="api\NodeType.cs" />
+    <Compile Include="api\UnitType.cs" />
+    <Compile Include="objects\Entity.cs" />
+    <Compile Include="objects\FlowPlan.cs" />
     <Compile Include="objects\Node.cs" />
+    <Compile Include="objects\Unit.cs" />
     <Compile Include="src\Entry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="api\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
