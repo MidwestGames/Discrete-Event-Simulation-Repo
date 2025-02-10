@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Dynamic;
+using System.Runtime.CompilerServices;
 using DiscreteEventSimulation.api;
 
 namespace DiscreteEventSimulation.objects
@@ -14,8 +16,8 @@ namespace DiscreteEventSimulation.objects
         public string name { get; set; }
         public string product { get; set; }
         public sbyte size { get; set; }
-        public UnitType unitType { get; private set; }
-        public string flowPlan { get; set; }
+        private UnitType unitType { get; }
+        public string flowPlan { get; set; } 
         public FlowPlan flow {get; set;}
         
         #endregion
@@ -42,12 +44,52 @@ namespace DiscreteEventSimulation.objects
         // Functions to populate in inherited classes and standard functions
         #region Functions
 
-        public double CalculateGoal()
+        public List<double> CalculateGoals(List<Node> nodes)
         {
-            //TODO: Set up function to calculate the goal from flow-plan for instance
-            return -1f;
+            // Goals List Index : 0 - CT | 1 - QT | 2 - RPT
+            List<double> goals = new List<double>(3);
+            switch (unitType)
+            {
+                case UnitType.Standard:
+                    this.queueTimeReductionFactor = 1.0f;
+                    break;
+                
+                case UnitType.HighPriority:
+                    this.queueTimeReductionFactor = 0.8f;
+                    break;
+                
+                case UnitType.SuperPriority:
+                    this.queueTimeReductionFactor = 0.6f;
+                    break;
+                
+                case UnitType.UltraPriority:
+                    this.queueTimeReductionFactor = 0f;
+                    break;
+
+                default:
+                    this.queueTimeReductionFactor = 1.0f;
+                    break;
+            }
+            
+            foreach (Node node in nodes)
+            {
+                goals[1] += node.QueueTimeGoal * this.queueTimeReductionFactor;
+                goals[2] += node.ProcessTimeGoal;
+                goals[0] += goals[1] + goals[2];
+            }
+            return goals;
         }
         #endregion
+        
+        // Constructor 1: Empty dataset
+        public Unit(string _name, UnitType _unitType, string _product, string _flowPlan, int size)
+        {
+            this.name = _name;
+            this.product = _product;
+            this.size = (sbyte)size;
+            this.unitType = _unitType;
+            this.flowPlan = _flowPlan;
+        }
         
     }
 }

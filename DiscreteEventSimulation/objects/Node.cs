@@ -29,7 +29,7 @@ namespace DiscreteEventSimulation.objects
         #region Calculated Parameters
             // Index for statistical metrics:
             // 0: Min | 1: 25%tile | 2: Mean | 3: Median | 4: 75%tile | 5: 90%tile | 6: Max | 7: Standard Deviation 
-        public string ProcessTimeGoal { get; private set; }
+        public double ProcessTimeGoal { get; private set; }
         public List<double> ActualCycleTimeStats { get; private set; }
         public List<double> ActualQueueTimeStats { get; private set; }
         public List<double> ActualProcessTimeStats { get; private set; }
