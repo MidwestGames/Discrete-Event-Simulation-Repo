@@ -1,4 +1,4 @@
-﻿namespace DiscreteEventSimulation.objects
+﻿namespace DiscreteEventSimulation.objects.interfaces
 {
     public abstract class Entity
     {

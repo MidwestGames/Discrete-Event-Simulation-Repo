@@ -1,16 +1,13 @@
 ﻿using System;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using DiscreteEventSimulation;
 
 namespace UnitTests
 {
     [TestFixture]
-    public class Tests
+    public class TestUnit
     {
-        [Test]
-        public void Test1()
-        {
-            Assert.True(true);
-        }
+
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using DiscreteEventSimulation.api;
 
-namespace DiscreteEventSimulation.objects
+namespace DiscreteEventSimulation.objects.interfaces
 {
     public abstract class Node
     {
@@ -54,6 +54,14 @@ namespace DiscreteEventSimulation.objects
 
             return null;
         }
+
+        override
+        public string ToString()
+        {
+            //TODO: Implement in to string function
+            return "Testing Function";
+        }
+
         
         #endregion
 

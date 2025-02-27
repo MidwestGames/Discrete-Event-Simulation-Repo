@@ -4,7 +4,7 @@ using System.Dynamic;
 using System.Runtime.CompilerServices;
 using DiscreteEventSimulation.api;
 
-namespace DiscreteEventSimulation.objects
+namespace DiscreteEventSimulation.objects.interfaces
 {
     public abstract class Unit
     {
@@ -90,6 +90,5 @@ namespace DiscreteEventSimulation.objects
             this.unitType = _unitType;
             this.flowPlan = _flowPlan;
         }
-        
     }
 }

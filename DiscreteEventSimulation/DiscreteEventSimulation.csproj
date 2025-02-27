@@ -64,14 +64,25 @@
   <ItemGroup>
     <Compile Include="api\NodeType.cs" />
     <Compile Include="api\UnitType.cs" />
-    <Compile Include="objects\Entity.cs" />
-    <Compile Include="objects\FlowPlan.cs" />
-    <Compile Include="objects\Node.cs" />
-    <Compile Include="objects\Unit.cs" />
+    <Compile Include="objects\interfaces\Entity.cs" />
+    <Compile Include="objects\interfaces\FlowPlan.cs" />
+    <Compile Include="objects\interfaces\Node.cs" />
+    <Compile Include="objects\StandardNode.cs" />
+    <Compile Include="objects\interfaces\Unit.cs" />
     <Compile Include="src\Entry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="actuals objects\dotprocess.py" />
+    <None Include="actuals objects\flowplan.py" />
+    <None Include="actuals objects\funcs.py" />
+    <None Include="actuals objects\lot.py" />
+    <None Include="actuals objects\lotplan.py" />
+    <None Include="actuals objects\operation.py" />
+    <None Include="actuals objects\product.py" />
+    <None Include="actuals objects\route.py" />
+    <None Include="actuals objects\table.py" />
+    <None Include="actuals objects\tool.py" />
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>

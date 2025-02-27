@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DiscreteEventSimulation.objects
+namespace DiscreteEventSimulation.objects.interfaces
 {
     public class FlowPlan
     {
