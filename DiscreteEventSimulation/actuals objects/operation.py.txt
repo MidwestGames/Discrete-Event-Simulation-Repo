@@ -1,0 +1,88 @@
+import numpy as np
+import pandas as pd
+from util import tool as t
+from util import table as ta
+from util import funcs as h
+
+class Operation:
+    # Instance Variables
+    #region
+    name : int
+    shortDesc : str
+    longDesc : str
+    operType : str
+    sequence : int
+
+    entities : list[t.Tool]
+
+    ctGoal_hrs : float
+    qtGoal_hrs : float
+
+    # Gathered based on what type of summary is being used
+    actualCT_hrs : float # Used for single lot CT
+    actualCT_hrs : float # Used for single lot QT
+    actualCT_hrs : float # Used for single lot RPT
+
+    wwData : list[int] # Used to generate summaries for Entity, Route, Lotplan, Product, or Process Aggregate CT
+    ctData_hrs : list[float] # Used to generate summaries for Entity, Route, Lotplan, Product, or Process Aggregate CT
+    qtData_hrs : list[float] # Used to generate summaries for Entity, Route, Lotplan, Product, or Process Aggregate QT
+    rptData_hrs : list[float] # Used to generate summaries for Entity, Route, Lotplan, Product, or Process Aggregate RPT
+    #endregion
+    
+    def __init__(self, tab : ta.Table):
+        self.name = tab.operation
+        self.shortDesc = tab.operShortDesc
+        self.longDesc = tab.operLongDesc
+        self.operType = tab.operType
+        self.sequence = tab.sequence
+        self.ctGoal_hrs = tab.goalCT_hrs
+        self.qtGoal_hrs = tab.goalQT_hrs
+
+        self.entities = []
+
+    def PopulateEntities(self, lots : list[ta.Table], tools : list[t.Tool]):
+      # TODO: Test this implementation
+        for lot in lots:
+            if lot.operation == self.name:
+                for tool in tools:
+                    if lot.ceid == tool.ceid and lot.site == tool.site:
+                        if ~self.entities.__contains__(tool):
+                            self.entities.append(tool)
+        
+        return 0
+
+    def __to_string__(self):
+        result = ""
+        pad : list[int] = []
+
+        pad.append(h.CalculatePadding("Operation", self.name))
+        pad.append(h.CalculatePadding("Short Desc", self.shortDesc))
+        pad.append(h.CalculatePadding("Long Desc", self.longDesc))
+        pad.append(h.CalculatePadding("Oper Type", self.operType))
+        pad.append(h.CalculatePadding("Sequence", self.sequence))
+        pad.append(h.CalculatePadding("CT Goal", self.ctGoal_hrs))
+        pad.append(h.CalculatePadding("QT Goal", self.qtGoal_hrs))
+
+        header = ""
+        header += h.GetPaddedString("Operation", pad[0])
+        header += h.GetPaddedString("Short Desc", pad[1])
+        header += h.GetPaddedString("Long Desc", pad[2])
+        header += h.GetPaddedString("Oper Type", pad[3])
+        header += h.GetPaddedString("Sequence", pad[4])
+        header += h.GetPaddedString("CT Goal", pad[5])
+        header += h.GetPaddedString("QT Goal", pad[6])
+
+        data = "\n"
+
+        data += h.GetPaddedString(self.name, pad[0])
+        data += h.GetPaddedString(self.shortDesc, pad[1])
+        data += h.GetPaddedString(self.longDesc, pad[2])
+        data += h.GetPaddedString(self.operType, pad[3])
+        data += h.GetPaddedString(self.sequence, pad[4])
+        data += h.GetPaddedString(self.ctGoal_hrs, pad[5])
+        data += h.GetPaddedString(self.qtGoal_hrs, pad[6])
+
+        result = header + data
+
+        return result
+

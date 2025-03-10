@@ -1,0 +1,47 @@
+import numpy as np
+import pandas as pd
+from util import operation as o
+from util import table as t
+
+class Tool:
+
+    # Instance Variables
+    #region
+    site : str
+    functionalArea : str
+    ceid : str
+
+    entities : list[str]
+
+    operations : list[o.Operation]
+    #endregion
+
+    def __init__(self, tab : t.Table):
+        self.site = tab.site
+        self.functionalArea = tab.funcArea
+        self.ceid = tab.ceid
+
+        self.entities = []
+        self.operations = []
+
+    def PopulateEntities(self, tabs : list[t.Table]):
+        # TODO: Test this implementation
+        for tab in tabs:
+            if tab.ceid == self.ceid:
+                if ~self.entities.__contains__(tab.entity):
+                    self.entities.append(tab.entity)
+        return 0
+
+    def PopulateOperations(self, tabs : list[t.Table], opers : list[o.Operation]):
+        # TODO: Test this implementation
+        for tab in tabs:
+            if tab.ceid == self.ceid:
+                for oper in opers:
+                    if oper.name == tab.operation:
+                        if ~self.operations.__contains__(oper):
+                            self.operations.append(oper)
+
+        return -1
+    def __to_string__(self):
+        return f"Site - {self.site} | FA - {self.functionalArea} | CEID - {self.ceid}"
+

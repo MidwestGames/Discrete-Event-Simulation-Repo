@@ -1,0 +1,21 @@
+import numpy as np
+import pandas as pd
+from util import lotplan as l
+from util import table as t
+
+class Flowplan:
+    name : str
+
+    lotplans : list[l.Lotplan]
+
+    def __init__(self, _flowplan : str):
+        self.name = _flowplan
+
+    def PopulateLotplans(self, tabs : list[t.Table], lotplans : list[l.Lotplan]):
+        # TODO: Implement this function to populate lotplans using a list of tables and the global lotplan list
+
+        return -1
+
+    def __to_string__(self):
+
+        return "TODO: Create override __to_string__()"

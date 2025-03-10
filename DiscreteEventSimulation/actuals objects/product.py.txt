@@ -1,0 +1,15 @@
+import numpy as np
+import pandas as pd
+
+
+class Product:
+
+
+    def __init__(self):
+        print("TODO: Create Product Constructor")
+
+
+    def __to_string__(self):
+
+        return "TODO: Create override __to_string__()"
+

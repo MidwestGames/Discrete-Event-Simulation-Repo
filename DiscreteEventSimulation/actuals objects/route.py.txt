@@ -1,0 +1,22 @@
+import numpy as np
+import pandas as pd
+from util import operation as o
+from util import table as t
+
+class Route:
+
+    name : str
+
+    operations : list[o.Operation]
+
+    def __init__(self, _route : str):
+        self.name = _route
+
+    def PopulateOperations(self, tabs : list[t.Table], opers : list[o.Operation]):
+        # TODO: Implement this function to populate operations using a list of tables and the global operation list
+
+        return -1
+
+    def __to_string__(self):
+
+        return "TODO: Create override __to_string__()"

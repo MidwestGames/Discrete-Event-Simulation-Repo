@@ -1,0 +1,27 @@
+import numpy as np
+import pandas as pd
+import table as t
+from util import dotprocess as dp
+from util import flowplan as fp
+
+class Lot:
+
+    childLotName : str
+    parentLotName : str
+    lotState : str
+    prio : int
+
+    flowplan : fp.Flowplan
+    lotDotProc : dp.DotProcess
+
+    waferCount : int
+    dieCount : int
+
+    def __init__(self, _tables : list[t.Table]):
+        print("TODO: Create Lot Constructor")
+
+
+    def __to_string__(self):
+
+        return "TODO: Create override __to_string__()"
+
