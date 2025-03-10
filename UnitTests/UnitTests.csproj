@@ -112,7 +112,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestNode.cs" />
+    <Compile Include="TestInterfaces\TestNode.cs" />
+    <Compile Include="TestInterfaces\TestEntity.cs" />
+    <Compile Include="TestInterfaces\TestFlowPlan.cs" />
+    <Compile Include="TestInterfaces\TestUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
