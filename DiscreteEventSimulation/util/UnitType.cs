@@ -1,4 +1,4 @@
-﻿namespace DiscreteEventSimulation.api
+﻿namespace DiscreteEventSimulation.util
 {
     public enum UnitType
     {

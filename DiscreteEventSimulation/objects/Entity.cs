@@ -1,6 +1,6 @@
 ﻿namespace DiscreteEventSimulation.objects.interfaces
 {
-    public abstract class Entity
+    public class Entity
     {
         // TODO: Set up abstract info for Entity Class  
         
@@ -18,11 +18,5 @@
         #region Simulated Values
 
         #endregion
-
-        // Functions to populate in inherited classes and standard functions
-        #region Functions
-
-        #endregion
-
     }
 }

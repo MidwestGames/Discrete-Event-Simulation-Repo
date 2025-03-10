@@ -112,10 +112,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestInterfaces\TestNode.cs" />
-    <Compile Include="TestInterfaces\TestEntity.cs" />
-    <Compile Include="TestInterfaces\TestFlowPlan.cs" />
-    <Compile Include="TestInterfaces\TestUnit.cs" />
+    <Compile Include="TestingObjects\TestDerivedUnit.cs" />
+    <Compile Include="TestingObjects\TestEntity.cs" />
+    <Compile Include="TestingObjects\TestFlowPlan.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DiscreteEventSimulation\DiscreteEventSimulation.csproj">
