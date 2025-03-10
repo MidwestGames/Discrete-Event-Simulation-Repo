@@ -112,17 +112,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <Compile Include="TestInterfaces\TestNode.cs" />
     <Compile Include="TestInterfaces\TestEntity.cs" />
     <Compile Include="TestInterfaces\TestFlowPlan.cs" />
-    <Compile Include="TestInterfaces\TestUnit.cs" />
-=======
-    <Compile Include="TestInterfaces\TestEntity.cs" />
-    <Compile Include="TestInterfaces\TestFlowPlan.cs" />
-    <Compile Include="TestInterfaces\TestNode.cs" />
->>>>>>> Stashed changes
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestInterfaces\TestUnit.cs" />
   </ItemGroup>
   <ItemGroup>
