@@ -9,10 +9,7 @@ namespace DiscreteEventSimulation.objects
     public class StandardNode : interfaces.Node
     {
 
-        public StandardNode()
-        {
-            //TODO: Set up constructor using interface instance variables
-        }
+        // TODO: Set up constructors based on interface constructors
 
     }
 }
