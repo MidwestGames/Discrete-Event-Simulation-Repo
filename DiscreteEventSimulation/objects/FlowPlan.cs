@@ -15,7 +15,7 @@ namespace DiscreteEventSimulation.objects.interfaces
         #endregion
 
         // Calculated Parameters taken from imported data
-        #region Calculated Parameters
+        #region Calculated Parameters 
         
         public Int16 nodeCount { get; set; }
         public List<Node> nodes { get; set; }
