@@ -409,3 +409,4 @@ FodyWeavers.xsd
 /CTDataProcessor/objects/Product.cs
 /CTDataProcessor/objects/Route.cs
 /CTDataProcessor/src/Entry.cs
+/CTDataProcessor/util/DataTable.cs
