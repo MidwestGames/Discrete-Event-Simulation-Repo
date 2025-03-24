@@ -400,3 +400,12 @@ FodyWeavers.xsd
 *.sln.iml
 *.idea
 /CTDataProcessor/CTDataProcessor.csproj
+/CTDataProcessor/objects/Dotprocess.cs
+/CTDataProcessor/objects/Entity.cs
+/CTDataProcessor/objects/Flowplan.cs
+/CTDataProcessor/objects/Lot.cs
+/CTDataProcessor/objects/Lotplan.cs
+/CTDataProcessor/objects/Operation.cs
+/CTDataProcessor/objects/Product.cs
+/CTDataProcessor/objects/Route.cs
+/CTDataProcessor/src/Entry.cs
