@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="objects\Chamber.cs" />
+    <Compile Include="objects\old\Entity.cs" />
     <Compile Include="objects\FlowPlan.cs" />
     <Compile Include="objects\Frame.cs" />
     <Compile Include="objects\interfaces\Node.cs" />
