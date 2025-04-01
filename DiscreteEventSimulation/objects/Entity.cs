@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace DiscreteEventSimulation.objects.interfaces
+namespace DiscreteEventSimulation.objects
 {
     public class Entity
-    {
-        // TODO: Set up abstract info for Entity Class  
-        
+    {        
         // Required Parameters taken from imported data
         #region Required Parameters
 
