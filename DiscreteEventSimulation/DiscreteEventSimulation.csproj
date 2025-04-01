@@ -74,16 +74,6 @@
     <Compile Include="util\UnitType.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="actuals objects\dotprocess.py" />
-    <None Include="actuals objects\flowplan.py" />
-    <None Include="actuals objects\funcs.py" />
-    <None Include="actuals objects\lot.py" />
-    <None Include="actuals objects\lotplan.py" />
-    <None Include="actuals objects\operation.py" />
-    <None Include="actuals objects\product.py" />
-    <None Include="actuals objects\route.py" />
-    <None Include="actuals objects\table.py" />
-    <None Include="actuals objects\tool.py" />
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
