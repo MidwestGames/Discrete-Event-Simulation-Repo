@@ -3,7 +3,7 @@
 namespace DiscreteEventSimulation.objects
 {
     public class Entity
-    {        
+    {
         // Required Parameters taken from imported data
         #region Required Parameters
 

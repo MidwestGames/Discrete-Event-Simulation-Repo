@@ -62,9 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="objects\Entity.cs" />
+    <Compile Include="objects\Chamber.cs" />
     <Compile Include="objects\FlowPlan.cs" />
+    <Compile Include="objects\Frame.cs" />
     <Compile Include="objects\interfaces\Node.cs" />
+    <Compile Include="objects\Route.cs" />
     <Compile Include="objects\StandardNode.cs" />
     <Compile Include="objects\interfaces\Unit.cs" />
     <Compile Include="objects\StandardUnit.cs" />
@@ -90,7 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="api\" />
-    <Folder Include="data\Testing Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
