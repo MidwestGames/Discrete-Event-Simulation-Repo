@@ -36,9 +36,9 @@ namespace DiscreteEventSimulation.objects.interfaces
         //Simulated values generated from factory controller
         #region Simulated Values
 
-        public double simulatedCycleTime { get; set; }
-        public double simulatedQueueTime { get; set; }
-        public double simulatedProcessTime { get; set; }
+        protected double simulatedCycleTime { get; set; }
+        protected double simulatedQueueTime { get; set; }
+        protected double simulatedProcessTime { get; set; }
 
         #endregion
         
@@ -66,7 +66,7 @@ namespace DiscreteEventSimulation.objects.interfaces
         
         
         // Helper Functions
-        public string GetUnitType()
+        protected string GetUnitType()
         {
             switch (this.unitType)
             {

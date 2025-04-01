@@ -8,9 +8,9 @@ namespace DiscreteEventSimulation.objects
         // Required Parameters taken from imported data
         #region Required Parameters
 
-        public string name { get; set; }
-        public string product { get; set; }
-        public string productFamily { get; set; }
+        private string name { get; set; }
+        private string product { get; set; }
+        private string productFamily { get; set; }
 
         #endregion
 
