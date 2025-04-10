@@ -9,20 +9,14 @@ namespace DiscreteEventSimulation.objects.interfaces
     public abstract class Unit
     {
         // Required Parameters taken from imported data
-        #region Required Parameters
-
         protected string name { get; set; }
         protected string product { get; set; }
         protected sbyte size { get; set; }
         protected  UnitType unitType { get; set; }
         protected string flowPlan { get; set; } 
         protected FlowPlan flow {get; set;}
-        
-        #endregion
 
-        // Calculated Parameters taken from imported data
-        #region Calculated Parameters
-        
+        // Calculated Parameters taken from imported data        
         protected double cumulativeCycleTimeGoal { get; private set; }
         protected double cumulativeQueueTimeGoal { get; private set; }
         protected double cumulativeProcessTimeGoal { get; private set; }
@@ -31,16 +25,10 @@ namespace DiscreteEventSimulation.objects.interfaces
         protected float queueTimeReductionFactor;
         protected float cycleTimeReductionFactor;
         
-        #endregion
-
         //Simulated values generated from factory controller
-        #region Simulated Values
-
         protected double simulatedCycleTime { get; set; }
         protected double simulatedQueueTime { get; set; }
         protected double simulatedProcessTime { get; set; }
-
-        #endregion
         
         // Constructor 1: Empty FlowPlan
         protected Unit(string _name, string _product, string _flowPlan, int size)

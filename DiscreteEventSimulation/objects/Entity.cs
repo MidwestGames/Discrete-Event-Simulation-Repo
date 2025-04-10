@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace DiscreteEventSimulation.objects
 {
-    public class Route
+    public class Entity
     {
         // Required Parameters taken from imported data
-        private string name { get; set; }
-        private string product { get; set; }
-        private string productFamily { get; set; }
 
         // Calculated Parameters taken from imported data
 

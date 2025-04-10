@@ -5,23 +5,14 @@ namespace DiscreteEventSimulation.objects
 {
     public class FlowPlan
     {
-        // Required Parameters taken from imported data
-        #region Required Parameters
-        
+        // Required Parameters taken from imported data      
         private string name { get; set; }
         private string product { get; set; }
         private string productFamily { get; set; }
-        
-        #endregion
 
         // Calculated Parameters taken from imported data
-        #region Calculated Parameters 
-                
-        #endregion
 
         //Simulated values generated from factory controller
-        #region Simulated Values
 
-        #endregion
     }
 }

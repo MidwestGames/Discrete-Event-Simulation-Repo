@@ -7,8 +7,6 @@ namespace DiscreteEventSimulation.objects.interfaces
     public abstract class Node
     {
         // Required Parameters taken from imported data
-        #region Required Parameters
-        
         protected NodeType NType { get; private set; }
         protected string Name { get; set; }
         protected int Sequence { get; set; }
@@ -19,10 +17,7 @@ namespace DiscreteEventSimulation.objects.interfaces
         // Because Nodes can have unique processing times based on the flow it is included in, must add keys to make individual nodes for each of those factors
         protected string productCode { get; set; } // Might warrant creating structure to group product codes into families based on naming
 
-        #endregion
-
         // Calculated Parameters taken from imported data
-        #region Calculated Parameters
             // Index for statistical metrics (From Actual Factory Data):
             // 0: Min | 1: 25%tile | 2: Mean | 3: Median | 4: 75%tile | 5: 90%tile | 6: Max | 7: Standard Deviation | 8: Variance
         protected double ProcessTimeGoal { get; private set; }
@@ -31,15 +26,10 @@ namespace DiscreteEventSimulation.objects.interfaces
         protected List<double> ActualProcessTimeStats { get; private set; }
         
         protected List<Entity> Entities { get; set; }
-        
-        #endregion
 
         //Simulated values generated from factory controller
-        #region Simulated Values
-
             // TODO: Set up simulated data instance variables
 
-        #endregion
         protected List<double> CalculateStats(List<double> dataset)
         {
             // Index for statistical metrics:
