@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DiscreteEventSimulation.objects
+﻿namespace DiscreteEventSimulation.objects
 {
     public class Route
     {

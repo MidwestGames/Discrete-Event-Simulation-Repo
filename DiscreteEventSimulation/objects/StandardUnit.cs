@@ -1,6 +1,4 @@
 ﻿using DiscreteEventSimulation.util;
-using DiscreteEventSimulation.objects.interfaces;
-
 namespace DiscreteEventSimulation.objects
 {
     public class StandardUnit : interfaces.Unit
