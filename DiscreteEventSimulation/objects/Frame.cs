@@ -6,7 +6,7 @@ namespace DiscreteEventSimulation.objects
     {
         // Required Parameters taken from imported data
         private string name { get; set; }
-        private List<Entity> entities { get; set; }
+        private int chamberCount { get; set; }
 
         // Calculated Parameters taken from imported data
 
